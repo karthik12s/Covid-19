@@ -66,7 +66,8 @@
   </style>
   </head>
   <body>
-    <div>
+    <div class="alert alert-info" role="alert">
+     
 		<table >
 			<tr>
 				<td>
@@ -80,7 +81,9 @@
 				
 			  </div>
 			</div>
-		  </div>
+      </div>
+     
+     
 </td>
 
 <td>
@@ -94,7 +97,8 @@
 				
 			  </div>
 			</div>
-		  </div>
+      </div>
+
 </td>
 <td>
 		  <div class="flip-card">
@@ -121,22 +125,47 @@
 				
 			  </div>
 			</div>
-		  </div>
-		  </td>
+      </div>
+</td>
 		
             </tr>
-		</table>
+    </table>
+    <table>
+      <div class="alert alert-danger" role="alert">
+        <h6>Cases expected :</h6>
+        <h3 > <%= summary.totalP%></h3> 
+      </div>
+    </table>
 	</div>
-
-
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">OBSERVED</th>
+        <th scope="col">PREDICTED</th>
+      </tr>
+    </thead>
+    <tbody>
+     <% for(var i=0; i!=dateWiseData.length; i++ ){ %>
+      <tr>
+        <th scope="row"><%= dateWiseData[i].date%></th>
+        <td><%= dateWiseData[i].total%></td>
+        <td><%= dateWiseData[i].totalP%></td>
+       
+      </tr>
+     <%}%> 
+    </tbody>
+  </table>
+  
+<!-- 
 <div class="card" >
     <div class="card-body">
-      <h5 class="card-title">CONFIRMED :<%=summaryToday.total%> </h5>
+      <h5 class="card-title">CONFIRMED :<%= summary.total%></h5>
       <h5 class="card-title">RECOVERED :<%=summaryToday.discharged%> </h5>
       <h5 class="card-title">DEATHS  : <%=summaryToday.deaths%> </h5>
      
     </div>
-  </div>
+  </div> -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
