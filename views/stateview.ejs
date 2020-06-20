@@ -63,16 +63,27 @@
    background-color: cyan;
   margin: 200px;
   }
+  img {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  
+  width: 500px;
+  float: right;
+}
   </style>
   </head>
   <body>
-    <div class="alert alert-info" role="alert">
-     
+    
+      <div class="alert alert-info" role="alert">
+       <h3><b><%= summary.name %></b></h3> 
+       <img  src= " <%=summary.img%> ">
+       </div>
+    
 		<table >
 			<tr>
 				<td>
 		   <div class="flip-card">
-			<div class="flip-card-inner" >
+			  <div class="flip-card-inner" >
 			  <div class="flip-card-front" >
 				<h5>CONFIRMED</h5>
                 </div>
@@ -119,8 +130,8 @@
 			<div class="flip-card-inner">
 			  <div class="flip-card-front">
 				<h5>DEATHS</h5>
-                </div>
-			  <div class="flip-card-back">
+           </div>
+			  <div  class="flip-card-back">
 				<h3 ><%= summary.deaths%></h3> 
 				
 			  </div>
@@ -134,6 +145,8 @@
       <div class="alert alert-danger" role="alert">
         <h6>Cases expected :</h6>
         <h3 > <%= summary.totalP%></h3> 
+        <img src= " <%=summary.plot%> ">
+        
       </div>
     </table>
 	</div>
