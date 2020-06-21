@@ -6,10 +6,7 @@
   "scripts": {
     "start": "node index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/karthik12s/Covid-19.git"
-  },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
