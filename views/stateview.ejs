@@ -9,6 +9,296 @@
 
     <title>State Analysis </title>
    <style> 
+    @media(max-width: 650px){
+  body{
+  padding: 20px;
+  width: 100%;
+}
+.row{
+  width: 100%;
+  padding: 10px;
+}
+
+p{
+  font-size: 6px;
+}
+#row{
+  width: 100%;
+}
+#covid {
+  width: 100%;
+  padding: 0px;
+}
+#ctext{
+  font-size: 10px;
+  color: #b23e3d;
+  font-family: serif;
+  text-align: right;
+  height: 10px;
+  padding: 0px;
+}
+#nav-bar{
+  background-color: #b23e3d;
+  color: white;
+  font-family: serif;
+  height: 18px;
+  font-size: 15px;
+  margin: 0px;
+  padding: 0px;
+}
+.col-md-1{
+  width: 8.5%;
+  padding: 1px;
+}
+.col-md-2{
+  width: 17%;
+  padding: 1px;
+}
+.col-md-3{
+  width: 23%;
+  padding: 1px;
+}
+.col-md-6{
+  width: 50%;
+}
+.col-md-9{
+  width: 75%;
+}
+#nav-bar0{
+  background-color: #b23e3d;
+  color: white;
+  font-family: serif;
+  height: 18px;
+  font-size: 6px;
+  margin: 0px;
+  padding: 0px;
+}
+#nav-bar img{
+  height: 24px;
+}
+hr{
+  margin: 0px;
+  color: white;
+  border: 0px;
+  height: 1px;
+}
+.ni,.si,.nei,.ei,.wi {
+  height: 17px;
+  margin-bottom: 0px;
+}
+
+.dropni{
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  font-family: serif;
+  max-width: 90%;
+  box-shadow: 0px 20px 36px 0px;
+  height: 19px;
+  font-size: 6px;
+}
+.dropni a{
+  color: white;
+  padding: 1px 4px; 
+  background-color: #b23e3d;
+  display: block;
+  font-size: 6px;
+
+}
+.ni1{
+  width: 100px;
+  text-align: right;
+  margin-bottom: 0px;
+}
+#c1,#c2,#c3,#c4,#c5,#c6{
+  height: 18px;
+}
+.dropni:hover ,.ni:hover + .dropni{
+  display: block;
+}
+.ni1:hover + .dropni{
+  display: block;
+}
+.dropsi{
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  font-family: serif;
+  max-width: 90%;
+  box-shadow: 0px 20px 36px 0px;
+  height: 19px;
+  font-size: 6px;
+}
+.dropsi a{
+  color: white;
+  padding: 1px 4px; 
+  background-color: #b23e3d;
+  display: block;
+  font-size: 6px;
+}
+.dropsi:hover ,.si:hover + .dropsi{
+  display: block;
+}
+.dropwi{
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  font-family: serif;
+  max-width: 90%;
+  box-shadow: 0px 20px 36px 0px;
+  height: 19px;
+  font-size: 6px;
+}
+.dropwi a{
+  color: white;
+  padding: 1px 4px; 
+  background-color: #b23e3d;
+  display: block;
+  font-size: 6px;
+}
+.dropwi:hover ,.wi:hover + .dropwi{
+  display: block;
+}
+.dropei{
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  font-family: serif;
+  max-width: 90%;
+  box-shadow: 0px 20px 36px 0px;
+  height: 19px;
+  font-size: 6px;
+}
+.dropei a{
+  color: white;
+  padding: 1px 4px; 
+  background-color: #b23e3d;
+  display: block;
+  font-size: 6px;
+}
+.dropei:hover ,.ei:hover + .dropei{
+  display: block;
+}
+.dropnei{
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  font-family: serif;
+  max-width: 90%;
+  box-shadow: 0px 20px 36px 0px;
+  height: 19px;
+  font-size: 6px;
+}
+.dropnei a{
+  color: white;
+  padding: 1px 4px; 
+  background-color: #b23e3d;
+  display: block;
+  font-size: 6px;
+}
+.dropnei:hover ,.nei:hover + .dropnei{
+  display: block;
+}
+.flip-card {
+  background-color: transparent;
+  width: 40px;
+  height: 40px;
+  perspective: 1000px;
+}
+h3{
+  font-size: 6px;
+}
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.flip-card-front {
+  background-color:black;
+  color: white;
+  padding-top:15px ;
+}
+.flip-card-back {
+  background-color: black;
+  color: white;
+  padding-top:15px ;
+  transform: rotateY(180deg);
+}
+ td {
+  padding-right: 35px;
+}
+table{
+  display: flexbox;
+  align-content: center;
+  margin: 100px;
+  padding: 5px;
+}
+#ind{
+  width: 100%;
+}
+.im {
+  width: 50%;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+h3{
+  font-size:  15px;
+}
+h6{
+  font-size: 10px;
+}
+#ta{
+  width: 50%;
+  margin-top: -40px;
+}
+#al{
+   margin-top: -50px;
+    height: 35px;
+    width: 100%;;
+}
+#al1{
+   margin-top: 10px;
+    height: 55px;
+    width: 100%;;
+}
+#ac,#to,#de,#re{
+  font-size: 6px;
+}
+#ac1,#to1,#de1,#re1{
+  font-size: 6px;
+}
+h5{
+  font-size: 6px;
+}
+#data{
+  width: 80%;
+}
+tr{
+  width: 100%;
+  height: 10px;
+}
+th {
+    padding: 0px;
+    font-size: 6px;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+}
+@media(min-width: 650px){
 body{
   padding: 20px;
 }
@@ -212,6 +502,25 @@ hr{
   border: 1px solid #ddd;
   border-radius: 4px;
   }
+  .im{
+  margin-left: 120px;
+  margin-top: 40px;
+  width: 400px;
+}
+#ta{
+  float: right;
+  width: 730px;
+  margin-top: 120px
+}
+#graph{
+  margin-left: 120px;
+  margin-top: 40px;
+  width: 400px;
+}
+#data{
+  width: 700px;
+}
+}
   </style>
   </head>
   <body>
@@ -300,12 +609,12 @@ hr{
       </div>
     </div>
     <div class="col-md-3">
-      <img  src="https://lh3.googleusercontent.com/C4_iGhxNsSSwJvlo_2RuuxzCGVyEMtuhCTaVmGTNn5F1PFQFoh214a61X0kJdB0zaQgZvwAxyCiOFGOyF3jenp9HZNQ3vwSiOMRiq_-AEEtJR5Iw71KpjSxsMJhRaWegYtX1u7G4qj0" style="height: 290px;">
+      <img id="ind" src="https://lh3.googleusercontent.com/C4_iGhxNsSSwJvlo_2RuuxzCGVyEMtuhCTaVmGTNn5F1PFQFoh214a61X0kJdB0zaQgZvwAxyCiOFGOyF3jenp9HZNQ3vwSiOMRiq_-AEEtJR5Iw71KpjSxsMJhRaWegYtX1u7G4qj0">
     </div>
   </div>
 
-       <img  src= " <%=summary.img%> " , style="margin-left: 120px;margin-top: 40px;width: 400px",class="im" >
-    <div style="float: right;width: 730px;margin-top: 120px;">
+       <img class="im",id="graph" src= " <%=summary.img%> " >
+    <div id="ta" >
 		<table >
 			<tr>
 				<td>
@@ -369,16 +678,16 @@ hr{
             </tr>
     </table>
   </div>
-  <div class="alert alert-info" role="alert" style="margin-top: 50px">
+  <div class="alert alert-info" role="alert" id="al" style="margin-top: 50px">
        <h3><b><%= summary.name %></b></h3>
        </div>
-      <div class="alert alert-danger" role="alert" >
+      <div class="alert alert-danger" id="al1" role="alert" >
         <h6>Cases expected :</h6>
         <h3 > <%= summary.totalP%></h3>   
       </div> 
     <div class="row">
       <div class="col-md-8">
-  <table class="table" style="width: 700px;">
+  <table class="table" id="data">
     <thead class="thead-light">
       <tr>
         <th scope="col">#</th>
